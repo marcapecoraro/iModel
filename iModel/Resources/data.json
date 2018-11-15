@@ -1,0 +1,28 @@
+{
+	"name": "All the project",
+	"projects":
+	[
+		{
+			"projectId":1,
+			"name":"Résidence Saint Louis Résidence Saint Louis Résidence Saint Louis",
+			"location":"168, rue des moulins, 59600 Maubeuge",
+			"descript":"43 appartements, T1 à T5, secteur calme et proche des transports, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+			"visuals" : ["img1", "img2", "img3"],
+			"modelResources" : {
+				"file":"stratocaster",
+				"type":"usdz"
+			}
+		},
+		{
+			"projectId":2,
+			"name":"Résidence Saint Georges",
+			"location":"184, rue des poules, 62184 Lourvin",
+			"descript":"84 appartements, T2 à T5, secteur calme et proche des transports, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+			"visuals" : ["img1", "img2", "img3"],
+			"modelResources" : {
+				"file":"stratocaster",
+				"type":"usdz"
+			}
+		}
+	]
+}

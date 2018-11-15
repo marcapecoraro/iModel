@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cellProject" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellProject" rowHeight="410" id="jbf-JB-Nuf" customClass="CellProject" customModule="ModelProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="370" height="407"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jbf-JB-Nuf" id="nAX-E6-VNl">
+                <rect key="frame" x="0.0" y="0.0" width="370" height="406.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9x-Jm-1hC">
+                        <rect key="frame" x="16" y="11" width="338" height="21"/>
+                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZV-6o-id1">
+                        <rect key="frame" x="51" y="302" width="303" height="21"/>
+                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                        <color key="textColor" red="0.31372549019607843" green="0.34509803921568627" blue="0.36470588235294116" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0c-OW-ggL">
+                        <rect key="frame" x="16" y="329" width="338" height="61.5"/>
+                        <string key="text">43 appartements, T1 à T5, secteur calme et proche des transports, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</string>
+                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pers-extérieure-2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="kGt-PC-WpO">
+                        <rect key="frame" x="16" y="39" width="338" height="250"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="250" id="fff-qV-tq1"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pinpoint" translatesAutoresizingMaskIntoConstraints="NO" id="nQr-lg-3h8">
+                        <rect key="frame" x="16" y="296" width="22" height="29"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="n0c-OW-ggL" firstAttribute="leading" secondItem="nAX-E6-VNl" secondAttribute="leadingMargin" id="0TD-UG-5la"/>
+                    <constraint firstItem="nQr-lg-3h8" firstAttribute="top" secondItem="kGt-PC-WpO" secondAttribute="bottom" constant="7" id="1mJ-lf-fDj"/>
+                    <constraint firstItem="n0c-OW-ggL" firstAttribute="top" secondItem="nQr-lg-3h8" secondAttribute="bottom" constant="4" id="6eC-QS-ak6"/>
+                    <constraint firstItem="nZV-6o-id1" firstAttribute="leading" secondItem="nQr-lg-3h8" secondAttribute="trailing" constant="13" id="9bK-2H-vSX"/>
+                    <constraint firstItem="kGt-PC-WpO" firstAttribute="leading" secondItem="nAX-E6-VNl" secondAttribute="leadingMargin" id="BRC-1C-1b3"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="kGt-PC-WpO" secondAttribute="trailing" id="Egm-Ve-uoJ"/>
+                    <constraint firstItem="N9x-Jm-1hC" firstAttribute="trailing" secondItem="nAX-E6-VNl" secondAttribute="trailingMargin" id="HDF-a1-JCy"/>
+                    <constraint firstItem="kGt-PC-WpO" firstAttribute="top" secondItem="N9x-Jm-1hC" secondAttribute="bottom" constant="7" id="Lqt-zD-gQK"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="nZV-6o-id1" secondAttribute="trailing" id="XcS-wV-STl"/>
+                    <constraint firstItem="N9x-Jm-1hC" firstAttribute="leading" secondItem="nAX-E6-VNl" secondAttribute="leadingMargin" id="fCW-eH-uFv"/>
+                    <constraint firstItem="n0c-OW-ggL" firstAttribute="top" secondItem="nQr-lg-3h8" secondAttribute="bottom" constant="4" id="ghB-md-bvt"/>
+                    <constraint firstItem="nQr-lg-3h8" firstAttribute="leading" secondItem="nAX-E6-VNl" secondAttribute="leadingMargin" id="le2-R8-p9L"/>
+                    <constraint firstItem="N9x-Jm-1hC" firstAttribute="top" secondItem="nAX-E6-VNl" secondAttribute="topMargin" id="uDm-4i-LED"/>
+                    <constraint firstItem="nZV-6o-id1" firstAttribute="top" secondItem="kGt-PC-WpO" secondAttribute="bottom" constant="13" id="ubm-a5-Wao"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="n0c-OW-ggL" secondAttribute="trailing" id="yoh-df-u8x"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="descriptLabel" destination="n0c-OW-ggL" id="r8b-av-Gbu"/>
+                <outlet property="locationLabel" destination="nZV-6o-id1" id="Rsf-ST-DqW"/>
+                <outlet property="nameLabel" destination="N9x-Jm-1hC" id="hP0-XU-Ra4"/>
+                <outlet property="visualsImageView" destination="kGt-PC-WpO" id="2Am-GT-qul"/>
+            </connections>
+            <point key="canvasLocation" x="33.600000000000001" y="-138.0809595202399"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Pinpoint" width="22" height="29"/>
+        <image name="pers-extérieure-2.jpg" width="1920" height="800"/>
+    </resources>
+</document>
