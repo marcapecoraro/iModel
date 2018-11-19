@@ -187,38 +187,67 @@ Connectez vous et explorez</string>
         <!--Se connecter-->
         <scene sceneID="IVV-uf-T7f">
             <objects>
-                <viewController title="Se connecter" id="vO0-aG-ZLU" customClass="SignInVC" customModule="iModelExt" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Se connecter" id="vO0-aG-ZLU" customClass="SignUpVC" customModule="iModelExt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NNT-dh-LI1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQA-sM-QvI">
-                                <rect key="frame" x="16" y="393" width="343" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="83g-6C-hZR">
+                                <rect key="frame" x="16" y="173" width="343" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="ICE-ik-wVH"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mot de passe" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="85o-m0-lvf">
+                                <rect key="frame" x="16" y="236" width="343" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="FLh-Ma-ily"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQA-sM-QvI">
+                                <rect key="frame" x="16" y="302" width="343" height="52"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="qns-Gj-on7"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <state key="normal" title="Se connecter">
+                                <state key="normal" title="Valider">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="signIn:" destination="HQL-RS-Gxp" eventType="touchUpInside" id="rqR-H4-Yny"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="83g-6C-hZR">
-                                <rect key="frame" x="16" y="173" width="99" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="85o-m0-lvf" firstAttribute="leading" secondItem="r5s-N9-5VH" secondAttribute="leading" constant="16" id="3HL-zN-Xta"/>
+                            <constraint firstItem="83g-6C-hZR" firstAttribute="top" secondItem="r5s-N9-5VH" secondAttribute="top" constant="109" id="KaX-zy-KGz"/>
+                            <constraint firstItem="83g-6C-hZR" firstAttribute="leading" secondItem="r5s-N9-5VH" secondAttribute="leading" constant="16" id="Mig-eq-QtM"/>
+                            <constraint firstItem="85o-m0-lvf" firstAttribute="top" secondItem="83g-6C-hZR" secondAttribute="bottom" constant="11" id="TQ9-mP-lyB"/>
+                            <constraint firstItem="r5s-N9-5VH" firstAttribute="trailing" secondItem="85o-m0-lvf" secondAttribute="trailing" constant="16" id="UfY-h7-7BY"/>
+                            <constraint firstItem="VQA-sM-QvI" firstAttribute="leading" secondItem="r5s-N9-5VH" secondAttribute="leading" constant="16" id="afh-k3-lX8"/>
+                            <constraint firstItem="r5s-N9-5VH" firstAttribute="trailing" secondItem="VQA-sM-QvI" secondAttribute="trailing" constant="16" id="b69-ZA-Rbd"/>
+                            <constraint firstItem="VQA-sM-QvI" firstAttribute="top" secondItem="85o-m0-lvf" secondAttribute="bottom" constant="14" id="fQ9-8K-MzO"/>
+                            <constraint firstItem="r5s-N9-5VH" firstAttribute="trailing" secondItem="83g-6C-hZR" secondAttribute="trailing" constant="16" id="sOb-yw-gM8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="r5s-N9-5VH"/>
                     </view>
-                    <navigationItem key="navigationItem" id="1cZ-uz-6TC"/>
+                    <navigationItem key="navigationItem" title="Se connecter" largeTitleDisplayMode="always" id="1cZ-uz-6TC"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="83g-6C-hZR" id="KtQ-Pz-ule"/>
+                        <outlet property="passwordTextField" destination="85o-m0-lvf" id="uey-Ah-tk8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W1r-0Q-MmW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="582" y="-1836"/>
+            <point key="canvasLocation" x="581.60000000000002" y="-1836.4317841079462"/>
         </scene>
         <!--Explorer-->
         <scene sceneID="O11-bm-xWz">
