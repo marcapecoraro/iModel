@@ -35,15 +35,19 @@ Connectez vous et explorez</string>
                                 <nil key="textColor"/>
                                 <color key="highlightedColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWh-25-EQk">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWh-25-EQk">
                                 <rect key="frame" x="16" y="372" width="288" height="52"/>
-                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="OAS-NN-H3i"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <state key="normal" title="Créer un compte">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="signIn:" destination="HQL-RS-Gxp" eventType="touchUpInside" id="P97-Qt-38h"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3O-NR-Enb">
                                 <rect key="frame" x="16" y="518" width="288" height="37"/>
@@ -51,16 +55,23 @@ Connectez vous et explorez</string>
                                 <state key="normal" title="Passer">
                                     <color key="titleColor" red="0.31372549019607843" green="0.34509803921568627" blue="0.36470588235294116" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="skip:" destination="HQL-RS-Gxp" eventType="touchUpInside" id="qaH-pp-o64"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01Z-ak-MGg">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01Z-ak-MGg">
                                 <rect key="frame" x="16" y="442" width="288" height="52"/>
                                 <color key="backgroundColor" red="0.56470588235294117" green="0.58823529411764708" blue="0.62352941176470589" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="tDY-Yt-IlW"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <state key="normal" title="Se connecter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUp:" destination="HQL-RS-Gxp" eventType="touchUpInside" id="0Et-TG-Qrd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -87,6 +98,11 @@ Connectez vous et explorez</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cqy-dX-HSn"/>
                     </view>
+                    <connections>
+                        <outlet property="signInButton" destination="FWh-25-EQk" id="k87-6O-vOa"/>
+                        <outlet property="signUpButton" destination="01Z-ak-MGg" id="dah-eT-bHg"/>
+                        <outlet property="skipButton" destination="f3O-NR-Enb" id="JR1-x8-nG9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02G-t8-laz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
