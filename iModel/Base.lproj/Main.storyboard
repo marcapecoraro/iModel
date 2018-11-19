@@ -72,6 +72,7 @@ Connectez vous et explorez</string>
                                 </state>
                                 <connections>
                                     <action selector="signUp:" destination="HQL-RS-Gxp" eventType="touchUpInside" id="0Et-TG-Qrd"/>
+                                    <segue destination="tAL-2t-hc2" kind="show" id="RZ7-uu-iYe"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -107,7 +108,7 @@ Connectez vous et explorez</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02G-t8-laz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1282.5" y="-306.33802816901408"/>
+            <point key="canvasLocation" x="-1306" y="-312"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="AFH-Kn-v8d">
@@ -166,6 +167,58 @@ Connectez vous et explorez</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vj8-UB-fkr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="583.20000000000005" y="20.239880059970016"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qfj-on-OWN">
+            <objects>
+                <navigationController id="tAL-2t-hc2" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c5n-8T-Ahw">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vO0-aG-ZLU" kind="relationship" relationship="rootViewController" id="iNo-38-HwT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Mo-sn-jG7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-367" y="-1537"/>
+        </scene>
+        <!--Se connecter-->
+        <scene sceneID="IVV-uf-T7f">
+            <objects>
+                <viewController title="Se connecter" id="vO0-aG-ZLU" customClass="SignInVC" customModule="iModelExt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NNT-dh-LI1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQA-sM-QvI">
+                                <rect key="frame" x="16" y="393" width="343" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Se connecter">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="signIn:" destination="HQL-RS-Gxp" eventType="touchUpInside" id="rqR-H4-Yny"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="83g-6C-hZR">
+                                <rect key="frame" x="16" y="173" width="99" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="r5s-N9-5VH"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1cZ-uz-6TC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W1r-0Q-MmW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="582" y="-1836"/>
         </scene>
         <!--Explorer-->
         <scene sceneID="O11-bm-xWz">
