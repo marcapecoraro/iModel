@@ -7,15 +7,10 @@ class SignUpVC: UIViewController {
 
 	override func viewDidLoad() {
         super.viewDidLoad()
-
-		navigationController?.navigationBar.prefersLargeTitles = true
-		navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-		navigationController?.navigationBar.shadowImage = UIImage()
-		
+		navigationItem.title = "Se connecter"
+		emailTextField.becomeFirstResponder()
 		emailTextField.underlined(color: UIColor.lightGray.cgColor)
 		passwordTextField.underlined(color: UIColor.lightGray.cgColor)
-
-		emailTextField.becomeFirstResponder()
     }
 
 	@IBAction func connect(_ sender: Any) {

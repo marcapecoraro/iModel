@@ -11,6 +11,8 @@
 		004AA04E21A31DE800021655 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA04D21A31DE800021655 /* Tools.swift */; };
 		004AA07D21A4284B00021655 /* UserBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA07C21A4284B00021655 /* UserBasic.swift */; };
 		004AA07F21A43BE400021655 /* DataUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA07E21A43BE400021655 /* DataUser.swift */; };
+		004AA08921A443C100021655 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA08821A443C100021655 /* SignInVC.swift */; };
+		004AA09A21A44AE900021655 /* SignNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA09921A44AE900021655 /* SignNC.swift */; };
 		005F10502199DEF90064C5B8 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 005F0FE72199C1C60064C5B8 /* AlamofireImage.framework */; };
 		005F10512199DEF90064C5B8 /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 005F0FE72199C1C60064C5B8 /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		005F10B92199E02E0064C5B8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 005F107A2199DFA60064C5B8 /* Alamofire.framework */; };
@@ -179,6 +181,8 @@
 		004AA04D21A31DE800021655 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		004AA07C21A4284B00021655 /* UserBasic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserBasic.swift; path = iModel/DataModel/UserBasic.swift; sourceTree = SOURCE_ROOT; };
 		004AA07E21A43BE400021655 /* DataUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUser.swift; sourceTree = "<group>"; };
+		004AA08821A443C100021655 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		004AA09921A44AE900021655 /* SignNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignNC.swift; sourceTree = "<group>"; };
 		005F0FDA2199C1C60064C5B8 /* AlamofireImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AlamofireImage.xcodeproj; path = Frameworks/AlamofireImage/AlamofireImage.xcodeproj; sourceTree = "<group>"; };
 		005F106E2199DFA60064C5B8 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Frameworks/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		005F10D42199E5040064C5B8 /* CellProject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellProject.swift; sourceTree = "<group>"; };
@@ -311,7 +315,9 @@
 			isa = PBXGroup;
 			children = (
 				00CE7C5F219B278500AA23B4 /* SignInSignUpVC.swift */,
+				004AA09921A44AE900021655 /* SignNC.swift */,
 				004AA03B21A30A6100021655 /* SignUpVC.swift */,
+				004AA08821A443C100021655 /* SignInVC.swift */,
 				005F10F02199E85B0064C5B8 /* AllProjectsTableVC.swift */,
 				005F10EF2199E85B0064C5B8 /* IModelVC.swift */,
 			);
@@ -565,11 +571,13 @@
 				004AA07F21A43BE400021655 /* DataUser.swift in Sources */,
 				004AA07D21A4284B00021655 /* UserBasic.swift in Sources */,
 				005F10E32199E5040064C5B8 /* CellProject.swift in Sources */,
+				004AA09A21A44AE900021655 /* SignNC.swift in Sources */,
 				005F10E72199E5040064C5B8 /* Project.swift in Sources */,
 				005F10F22199E85B0064C5B8 /* AllProjectsTableVC.swift in Sources */,
 				005F10E62199E5040064C5B8 /* DataModel.swift in Sources */,
 				00CE7C60219B278500AA23B4 /* SignInSignUpVC.swift in Sources */,
 				005F10ED2199E5040064C5B8 /* TestNode.swift in Sources */,
+				004AA08921A443C100021655 /* SignInVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

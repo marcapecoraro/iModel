@@ -47,6 +47,7 @@ Connectez vous et explorez</string>
                                 </state>
                                 <connections>
                                     <action selector="signIn:" destination="HQL-RS-Gxp" eventType="touchUpInside" id="P97-Qt-38h"/>
+                                    <segue destination="tAL-2t-hc2" kind="showDetail" identifier="signnc" id="ua6-Xw-mq1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3O-NR-Enb">
@@ -72,7 +73,7 @@ Connectez vous et explorez</string>
                                 </state>
                                 <connections>
                                     <action selector="signUp:" destination="HQL-RS-Gxp" eventType="touchUpInside" id="0Et-TG-Qrd"/>
-                                    <segue destination="tAL-2t-hc2" kind="show" id="RZ7-uu-iYe"/>
+                                    <segue destination="tAL-2t-hc2" kind="showDetail" identifier="signnc" id="vIX-9B-xQT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -108,7 +109,7 @@ Connectez vous et explorez</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02G-t8-laz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1306" y="-312"/>
+            <point key="canvasLocation" x="-1428" y="-312"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="AFH-Kn-v8d">
@@ -168,36 +169,38 @@ Connectez vous et explorez</string>
             </objects>
             <point key="canvasLocation" x="583.20000000000005" y="20.239880059970016"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--SignNC-->
         <scene sceneID="qfj-on-OWN">
             <objects>
-                <navigationController id="tAL-2t-hc2" sceneMemberID="viewController">
+                <navigationController id="tAL-2t-hc2" customClass="SignNC" customModule="iModelExt" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="c5n-8T-Ahw">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="largeTitleTextAttributes">
                             <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="32"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="vO0-aG-ZLU" kind="relationship" relationship="rootViewController" id="iNo-38-HwT"/>
+                        <segue destination="vO0-aG-ZLU" kind="show" identifier="signupsegue" animates="NO" id="Mng-aI-C6E"/>
+                        <segue destination="sZ4-F9-W4c" kind="show" identifier="signinsegue" animates="NO" id="eow-6M-M5Z"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Mo-sn-jG7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-367" y="-1537"/>
+            <point key="canvasLocation" x="-367" y="-1836"/>
         </scene>
-        <!--Se connecter-->
+        <!--SignUp-->
         <scene sceneID="IVV-uf-T7f">
             <objects>
-                <viewController title="Se connecter" id="vO0-aG-ZLU" customClass="SignUpVC" customModule="iModelExt" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="SignUp" id="vO0-aG-ZLU" customClass="SignUpVC" customModule="iModelExt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NNT-dh-LI1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="83g-6C-hZR">
-                                <rect key="frame" x="16" y="156" width="343" height="52"/>
+                                <rect key="frame" x="16" y="60" width="343" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="ICE-ik-wVH"/>
                                 </constraints>
@@ -206,7 +209,7 @@ Connectez vous et explorez</string>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mot de passe" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="85o-m0-lvf">
-                                <rect key="frame" x="16" y="219" width="343" height="52"/>
+                                <rect key="frame" x="16" y="122" width="343" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="FLh-Ma-ily"/>
                                 </constraints>
@@ -215,7 +218,7 @@ Connectez vous et explorez</string>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="send" enablesReturnKeyAutomatically="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQA-sM-QvI">
-                                <rect key="frame" x="16" y="282" width="343" height="52"/>
+                                <rect key="frame" x="16" y="184" width="343" height="52"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="qns-Gj-on7"/>
@@ -236,16 +239,16 @@ Connectez vous et explorez</string>
                             <constraint firstItem="85o-m0-lvf" firstAttribute="leading" secondItem="r5s-N9-5VH" secondAttribute="leading" constant="16" id="3HL-zN-Xta"/>
                             <constraint firstItem="83g-6C-hZR" firstAttribute="top" secondItem="r5s-N9-5VH" secondAttribute="top" constant="40" id="KaX-zy-KGz"/>
                             <constraint firstItem="83g-6C-hZR" firstAttribute="leading" secondItem="r5s-N9-5VH" secondAttribute="leading" constant="16" id="Mig-eq-QtM"/>
-                            <constraint firstItem="85o-m0-lvf" firstAttribute="top" secondItem="83g-6C-hZR" secondAttribute="bottom" constant="11" id="TQ9-mP-lyB"/>
+                            <constraint firstItem="85o-m0-lvf" firstAttribute="top" secondItem="83g-6C-hZR" secondAttribute="bottom" constant="10" id="TQ9-mP-lyB"/>
                             <constraint firstItem="r5s-N9-5VH" firstAttribute="trailing" secondItem="85o-m0-lvf" secondAttribute="trailing" constant="16" id="UfY-h7-7BY"/>
-                            <constraint firstItem="VQA-sM-QvI" firstAttribute="top" secondItem="85o-m0-lvf" secondAttribute="bottom" constant="11" id="Wlm-bP-023"/>
+                            <constraint firstItem="VQA-sM-QvI" firstAttribute="top" secondItem="85o-m0-lvf" secondAttribute="bottom" constant="10" id="Wlm-bP-023"/>
                             <constraint firstItem="VQA-sM-QvI" firstAttribute="leading" secondItem="r5s-N9-5VH" secondAttribute="leading" constant="16" id="afh-k3-lX8"/>
                             <constraint firstItem="r5s-N9-5VH" firstAttribute="trailing" secondItem="VQA-sM-QvI" secondAttribute="trailing" constant="16" id="b69-ZA-Rbd"/>
                             <constraint firstItem="r5s-N9-5VH" firstAttribute="trailing" secondItem="83g-6C-hZR" secondAttribute="trailing" constant="16" id="sOb-yw-gM8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="r5s-N9-5VH"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Se connecter" largeTitleDisplayMode="always" id="1cZ-uz-6TC"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="1cZ-uz-6TC"/>
                     <connections>
                         <outlet property="emailTextField" destination="83g-6C-hZR" id="KtQ-Pz-ule"/>
                         <outlet property="passwordTextField" destination="85o-m0-lvf" id="uey-Ah-tk8"/>
@@ -253,7 +256,86 @@ Connectez vous et explorez</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W1r-0Q-MmW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="581.60000000000002" y="-1836.4317841079462"/>
+            <point key="canvasLocation" x="577" y="-2242"/>
+        </scene>
+        <!--Signin-->
+        <scene sceneID="dGl-QN-3hc">
+            <objects>
+                <viewController title="Signin" id="sZ4-F9-W4c" customClass="SignInVC" customModule="iModelExt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S2C-Hg-Jmw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iz7-NZ-kMh">
+                                <rect key="frame" x="16" y="60" width="343" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="OdS-Cs-I4c"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mot de passe" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ifm-Ss-eDS">
+                                <rect key="frame" x="16" y="132" width="343" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="bAt-cV-mSh"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="password"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirmez votre mot de passe" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oCt-Zk-CLx">
+                                <rect key="frame" x="16" y="204" width="343" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Dbl-Ww-2uX"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="send" enablesReturnKeyAutomatically="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWm-kO-kfR">
+                                <rect key="frame" x="16" y="276" width="343" height="52"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="IYA-E5-CVD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Valider">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="connect:" destination="vO0-aG-ZLU" eventType="touchUpInside" id="D8U-sH-gng"/>
+                                    <action selector="signIn:" destination="HQL-RS-Gxp" eventType="touchUpInside" id="5RZ-pk-O7J"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rby-KO-QOg" firstAttribute="trailing" secondItem="iz7-NZ-kMh" secondAttribute="trailing" constant="16" id="260-FK-2fA"/>
+                            <constraint firstItem="iz7-NZ-kMh" firstAttribute="top" secondItem="rby-KO-QOg" secondAttribute="top" constant="40" id="5PO-5c-fzA"/>
+                            <constraint firstItem="rby-KO-QOg" firstAttribute="trailing" secondItem="Ifm-Ss-eDS" secondAttribute="trailing" constant="16" id="8gZ-PB-bzS"/>
+                            <constraint firstItem="JWm-kO-kfR" firstAttribute="leading" secondItem="rby-KO-QOg" secondAttribute="leading" constant="16" id="Gd5-1V-B3d"/>
+                            <constraint firstItem="JWm-kO-kfR" firstAttribute="top" secondItem="oCt-Zk-CLx" secondAttribute="bottom" constant="20" id="SOb-0U-37G"/>
+                            <constraint firstItem="rby-KO-QOg" firstAttribute="trailing" secondItem="oCt-Zk-CLx" secondAttribute="trailing" constant="16" id="aEo-4G-dvv"/>
+                            <constraint firstItem="rby-KO-QOg" firstAttribute="trailing" secondItem="JWm-kO-kfR" secondAttribute="trailing" constant="16" id="aI5-st-dsA"/>
+                            <constraint firstItem="iz7-NZ-kMh" firstAttribute="leading" secondItem="rby-KO-QOg" secondAttribute="leading" constant="16" id="eRk-0v-GzG"/>
+                            <constraint firstItem="oCt-Zk-CLx" firstAttribute="leading" secondItem="rby-KO-QOg" secondAttribute="leading" constant="16" id="mSL-li-30V"/>
+                            <constraint firstItem="Ifm-Ss-eDS" firstAttribute="top" secondItem="iz7-NZ-kMh" secondAttribute="bottom" constant="20" id="sLT-TB-HbP"/>
+                            <constraint firstItem="oCt-Zk-CLx" firstAttribute="top" secondItem="Ifm-Ss-eDS" secondAttribute="bottom" constant="20" id="umm-Tf-ZkN"/>
+                            <constraint firstItem="Ifm-Ss-eDS" firstAttribute="leading" secondItem="rby-KO-QOg" secondAttribute="leading" constant="16" id="v4b-dw-q3X"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rby-KO-QOg"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qYT-nX-CuX"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="iz7-NZ-kMh" id="l0e-AW-L9c"/>
+                        <outlet property="passwordConfirmTextField" destination="oCt-Zk-CLx" id="aoc-oN-XGL"/>
+                        <outlet property="passwordTextField" destination="Ifm-Ss-eDS" id="TGx-aT-8XA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jWF-La-NRF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="577" y="-1517"/>
         </scene>
         <!--Explorer-->
         <scene sceneID="O11-bm-xWz">
@@ -280,6 +362,7 @@ Connectez vous et explorez</string>
         <image name="signBackground" width="375" height="665"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="vIX-9B-xQT"/>
         <segue reference="Y4A-cC-ADh"/>
     </inferredMetricsTieBreakers>
 </document>
