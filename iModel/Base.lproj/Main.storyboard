@@ -225,7 +225,9 @@ Connectez vous et explorez</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="connect:" destination="vO0-aG-ZLU" eventType="touchUpInside" id="uGc-Tl-UIH"/>
                                     <action selector="signIn:" destination="HQL-RS-Gxp" eventType="touchUpInside" id="rqR-H4-Yny"/>
+                                    <segue destination="GXn-re-iDd" kind="showDetail" id="Y4A-cC-ADh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -277,4 +279,7 @@ Connectez vous et explorez</string>
         <image name="logo" width="258" height="297"/>
         <image name="signBackground" width="375" height="665"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Y4A-cC-ADh"/>
+    </inferredMetricsTieBreakers>
 </document>

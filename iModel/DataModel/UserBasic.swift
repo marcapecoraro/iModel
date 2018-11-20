@@ -16,7 +16,4 @@ struct UserBasic {
 		self.telephone = telephone
 		self.location = location
 	}
-
-	//For tests
-	//self.init(id: 1, email: "marca.peco@gmail.com", firstname: "Marc-Antoine", lastname: "Pecoraro", telephone: "0699689968", location: "245 rue d'Arras, Biarritz")
 }
