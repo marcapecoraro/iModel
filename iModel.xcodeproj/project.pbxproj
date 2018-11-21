@@ -361,16 +361,16 @@
 		0073FD062199BD4B000ACFCD /* iModel */ = {
 			isa = PBXGroup;
 			children = (
+				0073FD072199BD4B000ACFCD /* AppDelegate.swift */,
 				004AA0A321A5662E00021655 /* Models */,
 				004AA04C21A31DCF00021655 /* Tools */,
 				005F10F32199EE250064C5B8 /* Model.scnassets */,
 				005F10EE2199E85B0064C5B8 /* Controller */,
-				0073FD072199BD4B000ACFCD /* AppDelegate.swift */,
 				005F10D82199E5040064C5B8 /* DataModel */,
 				005F10DC2199E5040064C5B8 /* Resources */,
-				005F10DB2199E5040064C5B8 /* SceneKit Asset Catalog.scnassets */,
 				005F10D32199E5040064C5B8 /* View */,
 				005F10D62199E5040064C5B8 /* View Model */,
+				005F10DB2199E5040064C5B8 /* SceneKit Asset Catalog.scnassets */,
 				0073FD0B2199BD4B000ACFCD /* Main.storyboard */,
 				0073FD112199BD4C000ACFCD /* Assets.xcassets */,
 				0073FD132199BD4C000ACFCD /* LaunchScreen.storyboard */,

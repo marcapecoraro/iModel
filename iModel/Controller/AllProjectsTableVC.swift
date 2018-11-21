@@ -19,9 +19,7 @@ class AllProjectsTableVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellProject", for: indexPath) as! CellProject
 		let cellProjectViewModel = CellProjectViewModel(project: dataModel.projects[indexPath.row])
-		cell.cellProjectViewModel = cellProjectViewModel
-
-		
+		cell.cellProjectViewModel = cellProjectViewModel		
 
         return cell
     }
