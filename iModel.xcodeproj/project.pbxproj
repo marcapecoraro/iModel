@@ -16,6 +16,8 @@
 		004AA0B421A5667600021655 /* PinNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA0B321A5667600021655 /* PinNode.swift */; };
 		004AA0BE21A5949300021655 /* DetailProjectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA0BD21A5949300021655 /* DetailProjectVC.swift */; };
 		004AA0CF21A5972700021655 /* DetailProjectNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA0CE21A5972700021655 /* DetailProjectNC.swift */; };
+		004AA0D321A5BFDC00021655 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA0D221A5BFDC00021655 /* Project.swift */; };
+		004AA0D521A5C00600021655 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA0D421A5C00600021655 /* DataModel.swift */; };
 		005F10502199DEF90064C5B8 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 005F0FE72199C1C60064C5B8 /* AlamofireImage.framework */; };
 		005F10512199DEF90064C5B8 /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 005F0FE72199C1C60064C5B8 /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		005F10B92199E02E0064C5B8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 005F107A2199DFA60064C5B8 /* Alamofire.framework */; };
@@ -23,8 +25,6 @@
 		005F10E32199E5040064C5B8 /* CellProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005F10D42199E5040064C5B8 /* CellProject.swift */; };
 		005F10E42199E5040064C5B8 /* CellProject.xib in Resources */ = {isa = PBXBuildFile; fileRef = 005F10D52199E5040064C5B8 /* CellProject.xib */; };
 		005F10E52199E5040064C5B8 /* CellProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005F10D72199E5040064C5B8 /* CellProjectViewModel.swift */; };
-		005F10E62199E5040064C5B8 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005F10D92199E5040064C5B8 /* DataModel.swift */; };
-		005F10E72199E5040064C5B8 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005F10DA2199E5040064C5B8 /* Project.swift */; };
 		005F10E82199E5040064C5B8 /* SceneKit Asset Catalog.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 005F10DB2199E5040064C5B8 /* SceneKit Asset Catalog.scnassets */; };
 		005F10E92199E5040064C5B8 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 005F10DD2199E5040064C5B8 /* data.json */; };
 		005F10EA2199E5040064C5B8 /* pers-extérieure-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 005F10DF2199E5040064C5B8 /* pers-extérieure-2.jpg */; };
@@ -189,13 +189,13 @@
 		004AA0B321A5667600021655 /* PinNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinNode.swift; sourceTree = "<group>"; };
 		004AA0BD21A5949300021655 /* DetailProjectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProjectVC.swift; sourceTree = "<group>"; };
 		004AA0CE21A5972700021655 /* DetailProjectNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProjectNC.swift; sourceTree = "<group>"; };
+		004AA0D221A5BFDC00021655 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Project.swift; path = iModel/DataModel/Project.swift; sourceTree = SOURCE_ROOT; };
+		004AA0D421A5C00600021655 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataModel.swift; path = iModel/DataModel/DataModel.swift; sourceTree = SOURCE_ROOT; };
 		005F0FDA2199C1C60064C5B8 /* AlamofireImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AlamofireImage.xcodeproj; path = Frameworks/AlamofireImage/AlamofireImage.xcodeproj; sourceTree = "<group>"; };
 		005F106E2199DFA60064C5B8 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Frameworks/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		005F10D42199E5040064C5B8 /* CellProject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellProject.swift; sourceTree = "<group>"; };
 		005F10D52199E5040064C5B8 /* CellProject.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellProject.xib; sourceTree = "<group>"; };
 		005F10D72199E5040064C5B8 /* CellProjectViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellProjectViewModel.swift; sourceTree = "<group>"; };
-		005F10D92199E5040064C5B8 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
-		005F10DA2199E5040064C5B8 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		005F10DB2199E5040064C5B8 /* SceneKit Asset Catalog.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; name = "SceneKit Asset Catalog.scnassets"; path = "../../../../../LEARNING_SWIFT/APP/ModelProject/ModelProject/SceneKit Asset Catalog.scnassets"; sourceTree = "<group>"; };
 		005F10DD2199E5040064C5B8 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		005F10DF2199E5040064C5B8 /* pers-extérieure-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pers-extérieure-2.jpg"; sourceTree = "<group>"; };
@@ -295,10 +295,10 @@
 		005F10D82199E5040064C5B8 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				005F10D92199E5040064C5B8 /* DataModel.swift */,
+				004AA0D421A5C00600021655 /* DataModel.swift */,
 				004AA07E21A43BE400021655 /* DataUser.swift */,
 				004AA07C21A4284B00021655 /* UserBasic.swift */,
-				005F10DA2199E5040064C5B8 /* Project.swift */,
+				004AA0D221A5BFDC00021655 /* Project.swift */,
 			);
 			name = DataModel;
 			path = ../../../../../LEARNING_SWIFT/APP/ModelProject/ModelProject/DataModel;
@@ -582,7 +582,9 @@
 				005F10F12199E85B0064C5B8 /* IModelVC.swift in Sources */,
 				004AA0CF21A5972700021655 /* DetailProjectNC.swift in Sources */,
 				0073FD102199BD4B000ACFCD /* iModel.xcdatamodeld in Sources */,
+				004AA0D321A5BFDC00021655 /* Project.swift in Sources */,
 				005F10E52199E5040064C5B8 /* CellProjectViewModel.swift in Sources */,
+				004AA0D521A5C00600021655 /* DataModel.swift in Sources */,
 				004AA04E21A31DE800021655 /* Tools.swift in Sources */,
 				0073FD082199BD4B000ACFCD /* AppDelegate.swift in Sources */,
 				004AA03C21A30A6100021655 /* SignUpVC.swift in Sources */,
@@ -591,9 +593,7 @@
 				004AA0B421A5667600021655 /* PinNode.swift in Sources */,
 				005F10E32199E5040064C5B8 /* CellProject.swift in Sources */,
 				004AA09A21A44AE900021655 /* SignNC.swift in Sources */,
-				005F10E72199E5040064C5B8 /* Project.swift in Sources */,
 				005F10F22199E85B0064C5B8 /* AllProjectsTableVC.swift in Sources */,
-				005F10E62199E5040064C5B8 /* DataModel.swift in Sources */,
 				00CE7C60219B278500AA23B4 /* SignInSignUpVC.swift in Sources */,
 				005F10ED2199E5040064C5B8 /* TestNode.swift in Sources */,
 				004AA08921A443C100021655 /* SignInVC.swift in Sources */,
