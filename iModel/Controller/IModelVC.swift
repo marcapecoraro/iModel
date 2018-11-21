@@ -1,11 +1,11 @@
 import UIKit
 import SceneKit
 
-class IModelVC : UIViewController {
+class IModelVC : UIViewController, PinNodeDelegate {
 
 	@IBOutlet weak var sceneView: SCNView!
 	let scene = SCNScene()
-	
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
@@ -21,25 +21,33 @@ class IModelVC : UIViewController {
 		let lightNode = SCNNode()
 		lightNode.light = SCNLight()
 		lightNode.light?.type = .omni
-		lightNode.position = SCNVector3(0, 20, 40)
+		lightNode.position = SCNVector3(0, 20, 60)
 		scene.rootNode.addChildNode(lightNode)
-
-		let box = SCNBox(width: 3, height: 3, length: 3, chamferRadius: 3)
-		box.firstMaterial?.diffuse.contents = UIColor.red
-		box.firstMaterial?.isDoubleSided = true
-		let boxNode = SCNNode(geometry: box)
-		boxNode.position = SCNVector3(0, -10, -45)
-		scene.rootNode.addChildNode(boxNode)
 
 		sceneView.scene = scene
 		sceneView.showsStatistics = true
 		sceneView.backgroundColor = UIColor.black
 		sceneView.allowsCameraControl = true
 
-		addNode()
+		addModel()
+		addPin()
+
+		let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(rec:)))
+		sceneView.addGestureRecognizer(tap)
 	}
 
-	func addNode() {
+	@objc func handleTap(rec: UITapGestureRecognizer){
+		if rec.state == .ended {
+			let location: CGPoint = rec.location(in: sceneView)
+			let hits = self.sceneView.hitTest(location, options: nil)
+			if !hits.isEmpty{
+				let tappedNode = hits.first?.node
+				print("TAP \(tappedNode!)")
+			}
+		}
+	}
+
+	func addModel() {
 		if let filePath = Bundle.main.path(forResource: "stratocaster", ofType: "usdz", inDirectory: "Model.scnassets") {
 			let referenceURL = URL(fileURLWithPath: filePath)
 			let referenceNode = SCNReferenceNode(url: referenceURL)
@@ -48,5 +56,19 @@ class IModelVC : UIViewController {
 			scene.rootNode.addChildNode(referenceNode!)
 		}
 	}
+
+	func addPin() {
+		let pinNode = PinNode()
+		pinNode.delegate = self
+		scene.rootNode.addChildNode(pinNode.create(radius: 3, color: .blue, position: SCNVector3(0, 10, -51)))
+		scene.rootNode.addChildNode(pinNode.create(radius: 2, color: .green, position: SCNVector3(0, 20, -52)))
+	}
+
+	//PinNodeDelegate
+	func touch(pin: PinNode) {
+		print("touchPin")
+	}
+
+	
 
 }
