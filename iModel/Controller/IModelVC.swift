@@ -51,6 +51,12 @@ class IModelVC : UIViewController {
 		scene.rootNode.addChildNode(PinNode(id: 2, radius: 2, color: .green, position: SCNVector3(0, 20, -52)))
 	}
 
+	func goDetailProject() {
+		let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+		let nextViewController = storyBoard.instantiateViewController(withIdentifier: "detailprojectnc") as! DetailProjectNC
+		self.present(nextViewController, animated:true, completion:nil)
+	}
+
 	//Actions
 	@objc func tapOnNode(tap: UITapGestureRecognizer){
 		if tap.state == .ended {
@@ -61,6 +67,7 @@ class IModelVC : UIViewController {
 				switch tappedNode {
 					case let tappedNode as PinNode:
 						print("TAP pin \(tappedNode.id)")
+						goDetailProject()
 				default:
 					print("Unkown Nodes -> \(tappedNode!)")
 				}
