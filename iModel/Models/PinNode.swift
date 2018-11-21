@@ -1,23 +1,18 @@
-import Foundation
 import SceneKit
 
-protocol PinNodeDelegate: class {
-	func touch(pin: PinNode)
-}
-
 class PinNode: SCNNode {
-	weak var delegate: PinNodeDelegate!
+	var id: Int
 
-	func create(radius: CGFloat, color: UIColor, position: SCNVector3) -> SCNNode {
+	init(id: Int, radius: CGFloat, color: UIColor, position: SCNVector3) {
+		self.id = id
+		super.init()
 		let pin = SCNSphere(radius: radius)
 		pin.firstMaterial?.diffuse.contents = color
-		let pinNode = SCNNode(geometry: pin)
-		pinNode.position = position
-
-		return pinNode
+		self.geometry = pin
+		self.position = position
 	}
 
-	func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-		self.delegate?.touch(pin: self)
+	required init(coder aDecoder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
 	}
 }

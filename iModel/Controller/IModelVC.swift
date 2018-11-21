@@ -1,7 +1,7 @@
 import UIKit
 import SceneKit
 
-class IModelVC : UIViewController, PinNodeDelegate {
+class IModelVC : UIViewController {
 
 	@IBOutlet weak var sceneView: SCNView!
 	let scene = SCNScene()
@@ -32,19 +32,8 @@ class IModelVC : UIViewController, PinNodeDelegate {
 		addModel()
 		addPin()
 
-		let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(rec:)))
+		let tap = UITapGestureRecognizer(target: self, action: #selector(tapOnNode(tap:)))
 		sceneView.addGestureRecognizer(tap)
-	}
-
-	@objc func handleTap(rec: UITapGestureRecognizer){
-		if rec.state == .ended {
-			let location: CGPoint = rec.location(in: sceneView)
-			let hits = self.sceneView.hitTest(location, options: nil)
-			if !hits.isEmpty{
-				let tappedNode = hits.first?.node
-				print("TAP \(tappedNode!)")
-			}
-		}
 	}
 
 	func addModel() {
@@ -58,17 +47,24 @@ class IModelVC : UIViewController, PinNodeDelegate {
 	}
 
 	func addPin() {
-		let pinNode = PinNode()
-		pinNode.delegate = self
-		scene.rootNode.addChildNode(pinNode.create(radius: 3, color: .blue, position: SCNVector3(0, 10, -51)))
-		scene.rootNode.addChildNode(pinNode.create(radius: 2, color: .green, position: SCNVector3(0, 20, -52)))
+		scene.rootNode.addChildNode(PinNode(id: 1, radius: 3, color: .blue, position: SCNVector3(0, 10, -51)))
+		scene.rootNode.addChildNode(PinNode(id: 2, radius: 2, color: .green, position: SCNVector3(0, 20, -52)))
 	}
 
-	//PinNodeDelegate
-	func touch(pin: PinNode) {
-		print("touchPin")
+	//Actions
+	@objc func tapOnNode(tap: UITapGestureRecognizer){
+		if tap.state == .ended {
+			let location: CGPoint = tap.location(in: sceneView)
+			let hits = sceneView.hitTest(location, options: nil)
+			if !hits.isEmpty{
+				let tappedNode = hits.first?.node
+				switch tappedNode {
+					case let tappedNode as PinNode:
+						print("TAP pin \(tappedNode.id)")
+				default:
+					print("Unkown Nodes -> \(tappedNode!)")
+				}
+			}
+		}
 	}
-
-	
-
 }
