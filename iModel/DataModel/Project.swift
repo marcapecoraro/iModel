@@ -7,7 +7,7 @@ struct Project {
 	let descript: String
 	let visuals:Array<String>
 	var modelResources = (file: "", type: "")
-	var local = (id: 0, type: "", surface: "", orientation: "", statut: "", terrasse: "", balcon: "")
+	let locals: Array<Local>
 
 	enum CodingKeys: String, CodingKey {
 		case id = "projectId"
@@ -16,7 +16,7 @@ struct Project {
 		case descript
 		case visuals
 		case modelResources
-		case local
+		case locals
 	}
 
 	enum ModelResourcesCodingKeys: String, CodingKey {
@@ -25,7 +25,7 @@ struct Project {
 	}
 
 	enum LocalCodingKeys: String, CodingKey {
-		case id = "localId"
+		case id
 		case type
 		case surface
 		case orientation
@@ -35,7 +35,7 @@ struct Project {
 	}
 }
 
-extension Project: Encodable {
+/*extension Project: Encodable {
 	func encode(to encoder: Encoder) throws {
 		var container = encoder.container(keyedBy: CodingKeys.self)
 		try container.encode(id, forKey: .id)
@@ -45,16 +45,8 @@ extension Project: Encodable {
 		try container.encode(visuals, forKey: .visuals)
 		try container.encode(modelResources.file, forKey: .modelResources)
 		try container.encode(modelResources.type, forKey: .modelResources)
-		try container.encode(local.id, forKey: .local)
-		try container.encode(local.type, forKey: .local)
-		try container.encode(local.surface, forKey: .local)
-		try container.encode(local.orientation, forKey: .local)
-		try container.encode(local.statut, forKey: .local)
-		try container.encode(local.terrasse, forKey: .local)
-		try container.encode(local.balcon, forKey: .local)
-		
 	}
-}
+}*/
 
 extension Project: Decodable {
 	init(from decoder: Decoder) throws {
@@ -64,18 +56,25 @@ extension Project: Decodable {
 		location = try values.decode(String.self, forKey: .location)
 		descript = try values.decode(String.self, forKey: .descript)
 		visuals = try values.decode(Array<String>.self, forKey: .visuals)
+		locals = try values.decode(Array<Local>.self, forKey: .locals)
 
 		let valuesModelResources = try values.nestedContainer(keyedBy: ModelResourcesCodingKeys.self, forKey: .modelResources)
 		modelResources.file = try valuesModelResources.decode(String.self, forKey: .file)
 		modelResources.type = try valuesModelResources.decode(String.self, forKey: .type)
 
-		let valuesLocal = try values.nestedContainer(keyedBy: LocalCodingKeys.self, forKey: .local)
-		local.id = try valuesLocal.decode(Int.self, forKey: .id)
-		local.type = try valuesLocal.decode(String.self, forKey: .type)
-		local.surface = try valuesLocal.decode(String.self, forKey: .surface)
-		local.orientation = try valuesLocal.decode(String.self, forKey: .orientation)
-		local.statut = try valuesLocal.decode(String.self, forKey: .statut)
-		local.terrasse = try valuesLocal.decode(String.self, forKey: .terrasse)
-		local.balcon = try valuesLocal.decode(String.self, forKey: .balcon)
+		//locals = try values.nestedContainer(keyedBy: LocalCodingKeys.self, forKey: .locals)
+
+		//let valuesLocal = try values.nestedContainer(keyedBy: LocalCodingKeys.self, forKey: .locals)
+		//print(locals)
+		/*for local in locals {
+			print(local)
+			local.id = try valuesLocal.decode(Int.self, forKey: .id)
+			local.type = try valuesLocal.decode(String.self, forKey: .type)
+			local.surface = try valuesLocal.decode(String.self, forKey: .surface)
+			local.orientation = try valuesLocal.decode(String.self, forKey: .orientation)
+			local.statut = try valuesLocal.decode(String.self, forKey: .statut)
+			local.terrasse = try valuesLocal.decode(String.self, forKey: .terrasse)
+			local.balcon = try valuesLocal.decode(String.self, forKey: .balcon)
+		}*/
 	}
 }
