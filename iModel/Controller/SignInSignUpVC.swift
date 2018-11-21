@@ -31,8 +31,10 @@ class SignInSignUpVC: UIViewController {
 	}
 
 	override func prepare(for segue: UIStoryboardSegue,  sender: Any?) {
-		let signNavigationCroller = segue.destination as! SignNC
-		delegate = signNavigationCroller
+		if segue.identifier == "signnc" {
+			let signNavigationCroller = segue.destination as! SignNC
+			delegate = signNavigationCroller
+		}
 	}
 
 }

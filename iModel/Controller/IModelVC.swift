@@ -15,14 +15,21 @@ class IModelVC : UIViewController {
 	func initScene() {
 		let cameraNode = SCNNode()
 		cameraNode.camera = SCNCamera()
-		cameraNode.position = SCNVector3(0, 0, 5)
+		cameraNode.position = SCNVector3(0, 0, 30)
 		scene.rootNode.addChildNode(cameraNode)
 
 		let lightNode = SCNNode()
 		lightNode.light = SCNLight()
 		lightNode.light?.type = .omni
-		lightNode.position = SCNVector3(0, 10, 2)
+		lightNode.position = SCNVector3(0, 20, 40)
 		scene.rootNode.addChildNode(lightNode)
+
+		let box = SCNBox(width: 3, height: 3, length: 3, chamferRadius: 3)
+		box.firstMaterial?.diffuse.contents = UIColor.red
+		box.firstMaterial?.isDoubleSided = true
+		let boxNode = SCNNode(geometry: box)
+		boxNode.position = SCNVector3(0, -10, -45)
+		scene.rootNode.addChildNode(boxNode)
 
 		sceneView.scene = scene
 		sceneView.showsStatistics = true
@@ -33,9 +40,6 @@ class IModelVC : UIViewController {
 	}
 
 	func addNode() {
-		//let testNode = TestNode()
-		//scene.rootNode.addChildNode(testNode)
-
 		if let filePath = Bundle.main.path(forResource: "stratocaster", ofType: "usdz", inDirectory: "Model.scnassets") {
 			let referenceURL = URL(fileURLWithPath: filePath)
 			let referenceNode = SCNReferenceNode(url: referenceURL)

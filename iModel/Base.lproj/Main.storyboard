@@ -109,7 +109,7 @@ Connectez vous et explorez</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02G-t8-laz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1428" y="-312"/>
+            <point key="canvasLocation" x="-2042" y="-1085"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="AFH-Kn-v8d">
@@ -189,7 +189,7 @@ Connectez vous et explorez</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Mo-sn-jG7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-367" y="-1836"/>
+            <point key="canvasLocation" x="-479" y="-1892"/>
         </scene>
         <!--SignUp-->
         <scene sceneID="IVV-uf-T7f">
@@ -256,7 +256,7 @@ Connectez vous et explorez</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W1r-0Q-MmW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="577" y="-2242"/>
+            <point key="canvasLocation" x="-873" y="-1085"/>
         </scene>
         <!--Signin-->
         <scene sceneID="dGl-QN-3hc">
@@ -306,6 +306,7 @@ Connectez vous et explorez</string>
                                 <connections>
                                     <action selector="connect:" destination="vO0-aG-ZLU" eventType="touchUpInside" id="D8U-sH-gng"/>
                                     <action selector="signIn:" destination="HQL-RS-Gxp" eventType="touchUpInside" id="5RZ-pk-O7J"/>
+                                    <segue destination="GXn-re-iDd" kind="showDetail" id="Sbe-EB-QzC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -335,7 +336,7 @@ Connectez vous et explorez</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jWF-La-NRF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="577" y="-1517"/>
+            <point key="canvasLocation" x="-110" y="-1085"/>
         </scene>
         <!--Explorer-->
         <scene sceneID="O11-bm-xWz">
@@ -363,6 +364,6 @@ Connectez vous et explorez</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="vIX-9B-xQT"/>
-        <segue reference="Y4A-cC-ADh"/>
+        <segue reference="EZd-dO-bWJ"/>
     </inferredMetricsTieBreakers>
 </document>
