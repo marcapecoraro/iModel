@@ -5,6 +5,7 @@ class DetailProjectVC: UIViewController, UITableViewDelegate, UITableViewDataSou
 	@IBOutlet weak var detailImageView: UIImageView!
 	@IBOutlet weak var detailTableView: UITableView!
 
+
 	override func viewDidLoad() {
         super.viewDidLoad()
 		print("DetailProjectVC displayed with pin id:(X)")
@@ -22,12 +23,10 @@ extension DetailProjectVC {
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cell: UITableViewCell = detailTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
-		// create a new cell if needed or reuse an old one
-		let cell:UITableViewCell = detailTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-
-		// set the text from the data model
-		cell.textLabel?.text = "test"
+		cell.textLabel?.text = "My Key detail"
+		cell.detailTextLabel?.text = "My Value detail"
 
 		return cell
 	}
