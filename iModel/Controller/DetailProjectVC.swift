@@ -1,17 +1,19 @@
 import UIKit
 
 class DetailProjectVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
 	@IBOutlet weak var detailImageView: UIImageView!
 	@IBOutlet weak var detailTableView: UITableView!
 
+	var local: Local?
 
 	override func viewDidLoad() {
         super.viewDidLoad()
-		print("DetailProjectVC displayed with pin id:(X)")
-
 		detailTableView.delegate = self
 		detailTableView.dataSource = self
+
+		guard let detailProjectNC = navigationController as? DetailProjectNC else { return }
+		local = detailProjectNC.currentLocal
+		print(local?.pin.position)
     }
 }
 

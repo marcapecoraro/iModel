@@ -1,10 +1,15 @@
 import UIKit
 import SceneKit
 
+protocol IModelVCDelegate : class {
+	func sendLocal(local: Local)
+}
+
 class IModelVC : UIViewController {
 
 	@IBOutlet weak var sceneView: SCNView!
 	let scene = SCNScene()
+	weak var delegate: DetailProjectNC?
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -51,14 +56,16 @@ class IModelVC : UIViewController {
 		for local in locals {
 			let pinPosition = SCNVector3(local.pin.position.x, local.pin.position.y, local.pin.position.z)
 			let pinColor = UIColor(hexString: local.pin.color)!
-			scene.rootNode.addChildNode(PinNode(id: local.id, radius: 3, color: pinColor, position: pinPosition))
+			scene.rootNode.addChildNode(PinNode(id: local.id, radius: 2, color: pinColor, position: pinPosition))
 		}
 	}
 
 	func goDetailProject() {
 		let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-		let nextViewController = storyBoard.instantiateViewController(withIdentifier: "detailprojectnc") as! DetailProjectNC
-		self.present(nextViewController, animated:true, completion:nil)
+		let detailProjectNC = storyBoard.instantiateViewController(withIdentifier: "detailprojectnc") as! DetailProjectNC
+		delegate = detailProjectNC
+		delegate?.sendLocal(local: DataUser.currentProject!.locals[0])
+		self.present(detailProjectNC, animated:true, completion:nil)
 	}
 
 	//Actions
