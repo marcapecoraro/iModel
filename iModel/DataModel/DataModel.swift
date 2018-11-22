@@ -18,6 +18,9 @@ class DataModel {
 				let values = try JSONDecoder().decode(Data.self, from: data)
 				self.projects = values.projects
 				self.userProjects = values.userProjects
+
+				// --- In developement time
+				DataUser.currentProject = self.userProjects[0]
 				print("JSON : projects -> count = \(self.projects.count)")
 				print("JSON : userProjects -> count = \(self.userProjects.count)")
 

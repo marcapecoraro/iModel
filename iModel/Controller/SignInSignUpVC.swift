@@ -12,7 +12,6 @@ class SignInSignUpVC: UIViewController {
 
 	@IBOutlet weak var signInButton: UIButton!
 	@IBOutlet weak var signUpButton: UIButton!
-	@IBOutlet weak var skipButton: UIButton!
 
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +23,6 @@ class SignInSignUpVC: UIViewController {
 
 	@IBAction func signUp(_ sender: Any) {
 		delegate?.showSignUpVC()
-	}
-
-	@IBAction func skip(_ sender: Any) {
-		print("skip")
 	}
 
 	override func prepare(for segue: UIStoryboardSegue,  sender: Any?) {

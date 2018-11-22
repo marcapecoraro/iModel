@@ -57,7 +57,6 @@ Connectez vous et explorez</string>
                                     <color key="titleColor" red="0.31372549019607843" green="0.34509803921568627" blue="0.36470588235294116" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="skip:" destination="HQL-RS-Gxp" eventType="touchUpInside" id="qaH-pp-o64"/>
                                     <segue destination="GXn-re-iDd" kind="showDetail" id="EZd-dO-bWJ"/>
                                 </connections>
                             </button>
@@ -104,7 +103,6 @@ Connectez vous et explorez</string>
                     <connections>
                         <outlet property="signInButton" destination="FWh-25-EQk" id="k87-6O-vOa"/>
                         <outlet property="signUpButton" destination="01Z-ak-MGg" id="dah-eT-bHg"/>
-                        <outlet property="skipButton" destination="f3O-NR-Enb" id="JR1-x8-nG9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02G-t8-laz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -447,6 +445,6 @@ Connectez vous et explorez</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="vIX-9B-xQT"/>
-        <segue reference="Y4A-cC-ADh"/>
+        <segue reference="EZd-dO-bWJ"/>
     </inferredMetricsTieBreakers>
 </document>
