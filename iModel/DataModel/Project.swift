@@ -23,16 +23,6 @@ struct Project {
 		case file
 		case type
 	}
-
-	enum LocalCodingKeys: String, CodingKey {
-		case id
-		case type
-		case surface
-		case orientation
-		case statut
-		case terrasse
-		case balcon
-	}
 }
 
 extension Project: Encodable {

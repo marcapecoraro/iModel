@@ -21,6 +21,7 @@
 					, "statut":"Indisponible"
 					, "terrasse":"Oui"
 					, "balcon":"Non"
+					, "pin" : { "position": {"x": 0, "y": 10, "z": -51}, "color":"#C22845" }
 				},
 				{
 					"id": 2
@@ -30,6 +31,7 @@
 					, "statut":"Indisponible"
 					, "terrasse":"Oui"
 					, "balcon":"Non"
+					, "pin" : { "position": {"x": 0, "y": 20, "z": -52}, "color":"#049372" }
 				}
 			]
 		}
@@ -55,6 +57,7 @@
 							, "statut":"Indisponible"
 							, "terrasse":"Oui"
 							, "balcon":"Non"
+							, "pin" : { "position": {"x": 0, "y": 10, "z": -51}, "color":"#C22845" }
 							},
 							{
 								"id": 2
@@ -64,6 +67,7 @@
 								, "statut":"Indisponible"
 								, "terrasse":"Oui"
 								, "balcon":"Non"
+								, "pin" : { "position": {"x": 0, "y": 10, "z": -51}, "color":"#049372" }
 							}
 			]
 		}
@@ -85,6 +89,7 @@
 				, "statut":"Indisponible"
 				, "terrasse":"Oui"
 				, "balcon":"Non"
+				, "pin" : { "position": {"x": 0, "y": 10, "z": -51}, "color":"#049372" }
 			}]
 		}
 	]

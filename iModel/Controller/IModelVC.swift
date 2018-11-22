@@ -49,10 +49,10 @@ class IModelVC : UIViewController {
 	func addPin() {
 		guard let locals = DataUser.currentProject?.locals else { return }
 		for local in locals {
-			scene.rootNode.addChildNode(PinNode(id: local.id, radius: 3, color: .blue, position: SCNVector3(0, 10, -51)))
+			let pinPosition = SCNVector3(local.pin.position.x, local.pin.position.y, local.pin.position.z)
+			let pinColor = UIColor(hexString: local.pin.color)!
+			scene.rootNode.addChildNode(PinNode(id: local.id, radius: 3, color: pinColor, position: pinPosition))
 		}
-		//scene.rootNode.addChildNode(PinNode(id: 1, radius: 3, color: .blue, position: SCNVector3(0, 10, -51)))
-		//scene.rootNode.addChildNode(PinNode(id: 2, radius: 2, color: .green, position: SCNVector3(0, 20, -52)))
 	}
 
 	func goDetailProject() {

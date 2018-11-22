@@ -1,9 +1,10 @@
-class Local: Codable {
-	var id = Int()
-	var type = ""
-	var surface = ""
-	var orientation = ""
-	var statut = ""
-	var terrasse = ""
-	var balcon = ""
+struct Local: Codable {
+	let id: Int
+	let type: String
+	let surface: String
+	let orientation: String
+	let statut: String
+	let terrasse: String
+	let balcon: String
+	let pin: Pin
 }

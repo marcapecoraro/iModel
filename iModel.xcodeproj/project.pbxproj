@@ -21,6 +21,7 @@
 		004AA0D921A5C17900021655 /* SceneKit Asset Catalog.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 004AA0D821A5C17900021655 /* SceneKit Asset Catalog.scnassets */; };
 		004AA0DB21A5C30500021655 /* Local.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA0DA21A5C30500021655 /* Local.swift */; };
 		004AA0DD21A6BCB800021655 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 004AA0DC21A6BCB800021655 /* data.json */; };
+		004AA0DF21A6C74C00021655 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA0DE21A6C74C00021655 /* Pin.swift */; };
 		005F10502199DEF90064C5B8 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 005F0FE72199C1C60064C5B8 /* AlamofireImage.framework */; };
 		005F10512199DEF90064C5B8 /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 005F0FE72199C1C60064C5B8 /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		005F10B92199E02E0064C5B8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 005F107A2199DFA60064C5B8 /* Alamofire.framework */; };
@@ -195,6 +196,7 @@
 		004AA0D821A5C17900021655 /* SceneKit Asset Catalog.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = "SceneKit Asset Catalog.scnassets"; sourceTree = "<group>"; };
 		004AA0DA21A5C30500021655 /* Local.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Local.swift; path = iModel/DataModel/Local.swift; sourceTree = SOURCE_ROOT; };
 		004AA0DC21A6BCB800021655 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = data.json; path = iModel/Resources/data.json; sourceTree = SOURCE_ROOT; };
+		004AA0DE21A6C74C00021655 /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Pin.swift; path = iModel/DataModel/Pin.swift; sourceTree = SOURCE_ROOT; };
 		005F0FDA2199C1C60064C5B8 /* AlamofireImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AlamofireImage.xcodeproj; path = Frameworks/AlamofireImage/AlamofireImage.xcodeproj; sourceTree = "<group>"; };
 		005F106E2199DFA60064C5B8 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Frameworks/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		005F10D42199E5040064C5B8 /* CellProject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellProject.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				004AA0D621A5C0DA00021655 /* DataUser.swift */,
 				004AA0D221A5BFDC00021655 /* Project.swift */,
 				004AA0DA21A5C30500021655 /* Local.swift */,
+				004AA0DE21A6C74C00021655 /* Pin.swift */,
 			);
 			name = DataModel;
 			path = ../../../../../LEARNING_SWIFT/APP/ModelProject/ModelProject/DataModel;
@@ -582,6 +585,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				004AA0DF21A6C74C00021655 /* Pin.swift in Sources */,
 				005F10F12199E85B0064C5B8 /* IModelVC.swift in Sources */,
 				004AA0DB21A5C30500021655 /* Local.swift in Sources */,
 				004AA0D721A5C0DA00021655 /* DataUser.swift in Sources */,
