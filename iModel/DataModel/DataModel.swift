@@ -2,10 +2,12 @@ import Foundation
 
 struct Data: Decodable {
 	let projects: [Project]
+	let userProjects: [Project]
 }
 
 class DataModel {
 	var projects = [Project]()
+	var userProjects = [Project]()
 
 	init() {
 		guard let url = Bundle.main.url(forResource: "data", withExtension: "json") else { return }
@@ -15,7 +17,9 @@ class DataModel {
 			do {
 				let values = try JSONDecoder().decode(Data.self, from: data)
 				self.projects = values.projects
-				print("JSON : data -> \(self.projects.count) projects")
+				self.userProjects = values.userProjects
+				print("JSON : projects -> count = \(self.projects.count)")
+				print("JSON : userProjects -> count = \(self.userProjects.count)")
 
 			} catch let error {
 				print("JSON Error -> \(error)")

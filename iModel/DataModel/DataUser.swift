@@ -1,7 +1,3 @@
 class DataUser {
-	static var currentUser: UserBasic? {
-		didSet {
-			
-		}
-	}
+	static var currentUser: UserBasic?
 }
