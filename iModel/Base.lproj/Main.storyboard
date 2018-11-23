@@ -135,26 +135,16 @@ Connectez vous et explorez</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BPN-x8-f3V">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <color key="barTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <navigationItem title="Saint Louis" id="xsX-Qu-VTe"/>
-                                </items>
-                            </navigationBar>
                             <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kh0-YD-fF7">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </sceneKitView>
                         </subviews>
                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Kh0-YD-fF7" secondAttribute="bottom" id="6Sb-bB-d1b"/>
-                            <constraint firstItem="Kh0-YD-fF7" firstAttribute="top" secondItem="BPN-x8-f3V" secondAttribute="bottom" id="AG6-Bj-ReQ"/>
-                            <constraint firstItem="BPN-x8-f3V" firstAttribute="trailing" secondItem="wKO-8F-dOa" secondAttribute="trailing" id="MoJ-SF-2kk"/>
                             <constraint firstItem="Kh0-YD-fF7" firstAttribute="trailing" secondItem="wKO-8F-dOa" secondAttribute="trailing" id="Ofz-iN-LSz"/>
-                            <constraint firstItem="BPN-x8-f3V" firstAttribute="leading" secondItem="wKO-8F-dOa" secondAttribute="leading" id="YcI-PJ-uxa"/>
-                            <constraint firstItem="BPN-x8-f3V" firstAttribute="top" secondItem="wKO-8F-dOa" secondAttribute="top" id="ax3-R4-of8"/>
                             <constraint firstItem="Kh0-YD-fF7" firstAttribute="leading" secondItem="wKO-8F-dOa" secondAttribute="leading" id="dxL-Uk-hs6"/>
+                            <constraint firstItem="Kh0-YD-fF7" firstAttribute="top" secondItem="wKO-8F-dOa" secondAttribute="top" id="eOn-Ib-zTf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wKO-8F-dOa"/>
                     </view>
@@ -165,7 +155,7 @@ Connectez vous et explorez</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vj8-UB-fkr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="582" y="19"/>
+            <point key="canvasLocation" x="581.60000000000002" y="18.440779610194905"/>
         </scene>
         <!--SignNC-->
         <scene sceneID="qfj-on-OWN">
@@ -371,6 +361,14 @@ Connectez vous et explorez</string>
             </objects>
             <point key="canvasLocation" x="1401" y="18"/>
         </scene>
+        <!--Perspectives PageVC-->
+        <scene sceneID="7Ut-sB-SHz">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="mAE-GZ-OFP" customClass="PerspectivesPageVC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UGO-Fe-GP6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2238" y="426"/>
+        </scene>
         <!--Detail ProjectVC-->
         <scene sceneID="Ziw-sz-q8u">
             <objects>
@@ -444,7 +442,7 @@ Connectez vous et explorez</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcl-iV-XWD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2188" y="17.541229385307346"/>
+            <point key="canvasLocation" x="2239" y="-283"/>
         </scene>
     </scenes>
     <resources>

@@ -55,7 +55,14 @@ class IModelVC : UIViewController {
 		for (index, local) in locals.enumerated() {
 			let pinPosition = SCNVector3(local.pin.position.x, local.pin.position.y, local.pin.position.z)
 			let pinColor = UIColor(hexString: local.pin.color)!
-			scene.rootNode.addChildNode(PinNode(index: index, radius: 2, color: pinColor, position: pinPosition))
+			scene.rootNode.addChildNode(PinNode(index: index, radius: 2, color: pinColor, position: pinPosition, type: .local))
+		}
+
+		guard let perspectives = DataUser.currentProject?.perspectives else { return }
+		for (index, perspective) in perspectives.enumerated() {
+			let pinPosition = SCNVector3(perspective.pin.position.x, perspective.pin.position.y, perspective.pin.position.z)
+			let pinColor = UIColor(hexString: perspective.pin.color)!
+			scene.rootNode.addChildNode(PinNode(index: index, radius: 2, color: pinColor, position: pinPosition, type: .perspective))
 		}
 	}
 
@@ -67,6 +74,10 @@ class IModelVC : UIViewController {
 		self.present(detailProjectNC, animated:true, completion:nil)
 	}
 
+	func goPerspectivePage(_ perspectives: Perspective?) {
+		print("go perspectives")
+	}
+
 	//Actions
 	@objc func tapOnNode(tap: UITapGestureRecognizer){
 		if tap.state == .ended {
@@ -75,9 +86,11 @@ class IModelVC : UIViewController {
 			if !hits.isEmpty{
 				let tappedNode = hits.first?.node
 				switch tappedNode {
-					case let pinNode as PinNode:
+					case let pinNode as PinNode where pinNode.type == .local :
 						guard let local = DataUser.currentProject?.locals[pinNode.index] else { return }
 						goDetailProject(local)
+					case let pinNode as PinNode where pinNode.type == .perspective :
+						goPerspectivePage(nil)
 				default:
 					print("Unkown Nodes -> \(tappedNode!)")
 				}

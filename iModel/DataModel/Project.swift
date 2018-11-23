@@ -8,9 +8,10 @@ struct Project {
 	let visuals:Array<String>
 	var modelResources = (file: "", type: "")
 	let locals: Array<Local>
+	let perspectives: Array<Perspective>
 
 	enum CodingKeys: String, CodingKey {
-		case id = "projectId", name, location, descript, visuals, modelResources, locals
+		case id = "projectId", name, location, descript, visuals, modelResources, locals, perspectives
 	}
 
 	enum ModelResourcesCodingKeys: String, CodingKey {
@@ -29,6 +30,7 @@ extension Project: Encodable {
 		try container.encode(modelResources.file, forKey: .modelResources)
 		try container.encode(modelResources.type, forKey: .modelResources)
 		try container.encode(locals, forKey: .locals)
+		try container.encode(perspectives, forKey: .perspectives)
 	}
 }
 
@@ -41,6 +43,7 @@ extension Project: Decodable {
 		descript = try values.decode(String.self, forKey: .descript)
 		visuals = try values.decode(Array<String>.self, forKey: .visuals)
 		locals = try values.decode(Array<Local>.self, forKey: .locals)
+		perspectives = try values.decode(Array<Perspective>.self, forKey: .perspectives)
 
 		let valuesModelResources = try values.nestedContainer(keyedBy: ModelResourcesCodingKeys.self, forKey: .modelResources)
 		modelResources.file = try valuesModelResources.decode(String.self, forKey: .file)

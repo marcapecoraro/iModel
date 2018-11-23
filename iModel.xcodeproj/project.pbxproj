@@ -22,6 +22,8 @@
 		004AA0DB21A5C30500021655 /* Local.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA0DA21A5C30500021655 /* Local.swift */; };
 		004AA0DD21A6BCB800021655 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 004AA0DC21A6BCB800021655 /* data.json */; };
 		004AA0DF21A6C74C00021655 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA0DE21A6C74C00021655 /* Pin.swift */; };
+		004AA0ED21A8375800021655 /* PerspectivesPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA0EC21A8375800021655 /* PerspectivesPageVC.swift */; };
+		004AA0FE21A8401700021655 /* Perspective.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA0FD21A8401700021655 /* Perspective.swift */; };
 		005F10502199DEF90064C5B8 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 005F0FE72199C1C60064C5B8 /* AlamofireImage.framework */; };
 		005F10512199DEF90064C5B8 /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 005F0FE72199C1C60064C5B8 /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		005F10B92199E02E0064C5B8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 005F107A2199DFA60064C5B8 /* Alamofire.framework */; };
@@ -197,6 +199,8 @@
 		004AA0DA21A5C30500021655 /* Local.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Local.swift; path = iModel/DataModel/Local.swift; sourceTree = SOURCE_ROOT; };
 		004AA0DC21A6BCB800021655 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = data.json; path = iModel/Resources/data.json; sourceTree = SOURCE_ROOT; };
 		004AA0DE21A6C74C00021655 /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Pin.swift; path = iModel/DataModel/Pin.swift; sourceTree = SOURCE_ROOT; };
+		004AA0EC21A8375800021655 /* PerspectivesPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectivesPageVC.swift; sourceTree = "<group>"; };
+		004AA0FD21A8401700021655 /* Perspective.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Perspective.swift; path = iModel/DataModel/Perspective.swift; sourceTree = SOURCE_ROOT; };
 		005F0FDA2199C1C60064C5B8 /* AlamofireImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AlamofireImage.xcodeproj; path = Frameworks/AlamofireImage/AlamofireImage.xcodeproj; sourceTree = "<group>"; };
 		005F106E2199DFA60064C5B8 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Frameworks/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		005F10D42199E5040064C5B8 /* CellProject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellProject.swift; sourceTree = "<group>"; };
@@ -304,6 +308,7 @@
 				004AA0D621A5C0DA00021655 /* DataUser.swift */,
 				004AA0D221A5BFDC00021655 /* Project.swift */,
 				004AA0DA21A5C30500021655 /* Local.swift */,
+				004AA0FD21A8401700021655 /* Perspective.swift */,
 				004AA0DE21A6C74C00021655 /* Pin.swift */,
 			);
 			name = DataModel;
@@ -342,6 +347,7 @@
 				005F10EF2199E85B0064C5B8 /* IModelVC.swift */,
 				004AA0CE21A5972700021655 /* DetailProjectNC.swift */,
 				004AA0BD21A5949300021655 /* DetailProjectVC.swift */,
+				004AA0EC21A8375800021655 /* PerspectivesPageVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -593,6 +599,7 @@
 				0073FD102199BD4B000ACFCD /* iModel.xcdatamodeld in Sources */,
 				004AA0D321A5BFDC00021655 /* Project.swift in Sources */,
 				005F10E52199E5040064C5B8 /* CellProjectViewModel.swift in Sources */,
+				004AA0ED21A8375800021655 /* PerspectivesPageVC.swift in Sources */,
 				004AA0D521A5C00600021655 /* DataModel.swift in Sources */,
 				004AA04E21A31DE800021655 /* Tools.swift in Sources */,
 				0073FD082199BD4B000ACFCD /* AppDelegate.swift in Sources */,
@@ -605,6 +612,7 @@
 				00CE7C60219B278500AA23B4 /* SignInSignUpVC.swift in Sources */,
 				005F10ED2199E5040064C5B8 /* TestNode.swift in Sources */,
 				004AA08921A443C100021655 /* SignInVC.swift in Sources */,
+				004AA0FE21A8401700021655 /* Perspective.swift in Sources */,
 				004AA0BE21A5949300021655 /* DetailProjectVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,7 +12,8 @@
 				"file":"stratocaster"
 				, "type":"usdz"
 			}
-			, "locals" : [
+			, "locals" :
+			[
 				{
 					"id": 1
 					, "type":"T5"
@@ -32,6 +33,18 @@
 					, "terrasse":"Oui"
 					, "balcon":"Non"
 					, "pin" : { "position": {"x": 0, "y": 20, "z": -52}, "color":"#049372" }
+				}
+			]
+			, "perspectives" : [
+				{
+					"id": 3
+					, "pin" : { "position": {"x": 10, "y": 10, "z": -51}, "color":"#D1345F" }
+					, "img" : ["https://as1.ftcdn.net/jpg/01/63/33/78/500_F_163337883_Os19EuH8U6ktZT7Zo1NAJ6GYHo9CFS7T.jpg"]
+				},
+				{
+					"id": 4
+					, "pin" : { "position": {"x": -10, "y": 10, "z": -51}, "color":"#D1345F" }
+					, "img" : ["https://as1.ftcdn.net/jpg/01/63/33/78/500_F_163337883_Os19EuH8U6ktZT7Zo1NAJ6GYHo9CFS7T.jpg"]
 				}
 			]
 		}
@@ -70,6 +83,18 @@
 								, "pin" : { "position": {"x": 0, "y": 10, "z": -51}, "color":"#049372" }
 							}
 			]
+			, "perspectives" : [
+				{
+					"id": 3
+					, "pin" : { "position": {"x": 10, "y": 10, "z": -51}, "color":"#D1345F" }
+					, "img" : ["https://as1.ftcdn.net/jpg/01/63/33/78/500_F_163337883_Os19EuH8U6ktZT7Zo1NAJ6GYHo9CFS7T.jpg"]
+				},
+				{
+					"id": 4
+					, "pin" : { "position": {"x": -10, "y": 10, "z": -51}, "color":"#D1345F" }
+					, "img" : ["https://as1.ftcdn.net/jpg/01/63/33/78/500_F_163337883_Os19EuH8U6ktZT7Zo1NAJ6GYHo9CFS7T.jpg"]
+				}
+			]
 		}
 		,{
 			"projectId":2
@@ -81,7 +106,8 @@
 				 "file":"stratocaster"
 				,"type":"usdz"
 			}
-			,"locals" : [{
+			,"locals" : [
+				{
 				"id": 1
 				, "type":"T5"
 				, "surface":"104,61 m2"
@@ -90,7 +116,20 @@
 				, "terrasse":"Oui"
 				, "balcon":"Non"
 				, "pin" : { "position": {"x": 0, "y": 10, "z": -51}, "color":"#049372" }
-			}]
+			}
+			]
+			, "perspectives" : [
+				{
+					"id": 3
+					, "pin" : { "position": {"x": 10, "y": 10, "z": -51}, "color":"#D1345F" }
+					, "img" : ["https://as1.ftcdn.net/jpg/01/63/33/78/500_F_163337883_Os19EuH8U6ktZT7Zo1NAJ6GYHo9CFS7T.jpg"]
+				},
+				{
+					"id": 4
+					, "pin" : { "position": {"x": -10, "y": 10, "z": -51}, "color":"#D1345F" }
+					, "img" : ["https://as1.ftcdn.net/jpg/01/63/33/78/500_F_163337883_Os19EuH8U6ktZT7Zo1NAJ6GYHo9CFS7T.jpg"]
+				}
+			]
 		}
 	]
 }
