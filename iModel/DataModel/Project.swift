@@ -10,18 +10,11 @@ struct Project {
 	let locals: Array<Local>
 
 	enum CodingKeys: String, CodingKey {
-		case id = "projectId"
-		case name
-		case location
-		case descript
-		case visuals
-		case modelResources
-		case locals
+		case id = "projectId", name, location, descript, visuals, modelResources, locals
 	}
 
 	enum ModelResourcesCodingKeys: String, CodingKey {
-		case file
-		case type
+		case file, type
 	}
 }
 

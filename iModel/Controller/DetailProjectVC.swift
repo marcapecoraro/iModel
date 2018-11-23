@@ -5,6 +5,7 @@ class DetailProjectVC: UIViewController, UITableViewDelegate, UITableViewDataSou
 	@IBOutlet weak var detailTableView: UITableView!
 
 	var local: Local?
+	var data = [[String: Any]]()
 
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -12,23 +13,25 @@ class DetailProjectVC: UIViewController, UITableViewDelegate, UITableViewDataSou
 		detailTableView.dataSource = self
 
 		guard let detailProjectNC = navigationController as? DetailProjectNC else { return }
-		local = detailProjectNC.currentLocal
-		print(local?.pin.position)
+		guard let local = detailProjectNC.currentLocal else { return }
+		data = local.getAllProperties()
     }
 }
 
 //---TableView
 
 extension DetailProjectVC {
+
+
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 5
+		return data.count
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell: UITableViewCell = detailTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
-		cell.textLabel?.text = "My Key detail"
-		cell.detailTextLabel?.text = "My Value detail"
+		cell.textLabel?.text = data[indexPath.row].first?.key
+		cell.detailTextLabel?.text = data[indexPath.row].first?.value as? String
 
 		return cell
 	}

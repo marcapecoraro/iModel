@@ -3,14 +3,11 @@ struct Pin: Codable {
 	var position = (x: 0, y: 0, z: 0)
 
 	enum CodingKeys: String, CodingKey {
-		case color
-		case position
+		case color, position
 	}
 
 	enum PositionCodingKeys: String, CodingKey {
-		case x
-		case y
-		case z
+		case x, y, z
 	}
 
 	init(from decoder: Decoder) throws {
