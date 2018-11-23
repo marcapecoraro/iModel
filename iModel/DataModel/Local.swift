@@ -12,7 +12,7 @@ struct Local: Codable {
 
 	func getAllProperties() -> [[String: Any]] {
 
-		var result: [[String: Any]] = [[:]]
+		var result: [[String: Any]] = []
 		let mirror = Mirror(reflecting: self)
 
 		for (property, value) in mirror.children where value is String {

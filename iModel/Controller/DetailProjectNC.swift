@@ -2,7 +2,7 @@ import UIKit
 
 class DetailProjectNC: UINavigationController, IModelVCDelegate {
 
-	func sendLocal(local: Local) {
+	func sendLocal(_ local: Local) {
 		currentLocal = local
 	}
 
@@ -15,6 +15,5 @@ class DetailProjectNC: UINavigationController, IModelVCDelegate {
 			print("error local is nil ")
 			return
 		}
-		print(local)
 	}
 }

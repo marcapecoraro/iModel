@@ -16,6 +16,9 @@ class DetailProjectVC: UIViewController, UITableViewDelegate, UITableViewDataSou
 		guard let local = detailProjectNC.currentLocal else { return }
 		data = local.getAllProperties()
     }
+	@IBAction func back(_ sender: UIBarButtonItem) {
+		navigationController?.dismiss(animated: true, completion: { })
+	}
 }
 
 //---TableView
@@ -29,7 +32,7 @@ extension DetailProjectVC {
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell: UITableViewCell = detailTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-
+		print(data[indexPath.row])
 		cell.textLabel?.text = data[indexPath.row].first?.key
 		cell.detailTextLabel?.text = data[indexPath.row].first?.value as? String
 

@@ -2,7 +2,7 @@ import UIKit
 import SceneKit
 
 protocol IModelVCDelegate : class {
-	func sendLocal(local: Local)
+	func sendLocal(_ local: Local)
 }
 
 class IModelVC : UIViewController {
@@ -53,18 +53,18 @@ class IModelVC : UIViewController {
 
 	func addPin() {
 		guard let locals = DataUser.currentProject?.locals else { return }
-		for local in locals {
+		for (index, local) in locals.enumerated() {
 			let pinPosition = SCNVector3(local.pin.position.x, local.pin.position.y, local.pin.position.z)
 			let pinColor = UIColor(hexString: local.pin.color)!
-			scene.rootNode.addChildNode(PinNode(id: local.id, radius: 2, color: pinColor, position: pinPosition))
+			scene.rootNode.addChildNode(PinNode(index: index, radius: 2, color: pinColor, position: pinPosition))
 		}
 	}
 
-	func goDetailProject() {
+	func goDetailProject(_ local: Local) {
 		let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
 		let detailProjectNC = storyBoard.instantiateViewController(withIdentifier: "detailprojectnc") as! DetailProjectNC
 		delegate = detailProjectNC
-		delegate?.sendLocal(local: DataUser.currentProject!.locals[0])
+		delegate?.sendLocal(local)
 		self.present(detailProjectNC, animated:true, completion:nil)
 	}
 
@@ -76,9 +76,9 @@ class IModelVC : UIViewController {
 			if !hits.isEmpty{
 				let tappedNode = hits.first?.node
 				switch tappedNode {
-					case let tappedNode as PinNode:
-						print("TAP pin \(tappedNode.id)")
-						goDetailProject()
+					case let pinNode as PinNode:
+						guard let local = DataUser.currentProject?.locals[pinNode.index] else { return }
+						goDetailProject(local)
 				default:
 					print("Unkown Nodes -> \(tappedNode!)")
 				}

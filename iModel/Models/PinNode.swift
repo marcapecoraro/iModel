@@ -1,10 +1,10 @@
 import SceneKit
 
 class PinNode: SCNNode {
-	var id: Int
+	var index: Int
 
-	init(id: Int, radius: CGFloat, color: UIColor, position: SCNVector3) {
-		self.id = id
+	init(index: Int, radius: CGFloat, color: UIColor, position: SCNVector3) {
+		self.index = index
 		super.init()
 		let pin = SCNSphere(radius: radius)
 		pin.firstMaterial?.diffuse.contents = color
