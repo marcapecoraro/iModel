@@ -32,7 +32,6 @@ extension DetailProjectVC {
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell: UITableViewCell = detailTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-		print(data[indexPath.row])
 		cell.textLabel?.text = data[indexPath.row].first?.key
 		cell.detailTextLabel?.text = data[indexPath.row].first?.value as? String
 

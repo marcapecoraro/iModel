@@ -15,6 +15,11 @@ class IModelVC : UIViewController {
 		super.viewDidLoad()
 
 		initScene()
+		addModel()
+		addPin()
+
+		let tap = UITapGestureRecognizer(target: self, action: #selector(tapOnNode(tap:)))
+		sceneView.addGestureRecognizer(tap)
 	}
 
 	func initScene() {
@@ -33,12 +38,6 @@ class IModelVC : UIViewController {
 		sceneView.showsStatistics = true
 		sceneView.backgroundColor = UIColor.black
 		sceneView.allowsCameraControl = true
-
-		addModel()
-		addPin()
-
-		let tap = UITapGestureRecognizer(target: self, action: #selector(tapOnNode(tap:)))
-		sceneView.addGestureRecognizer(tap)
 	}
 
 	func addModel() {
