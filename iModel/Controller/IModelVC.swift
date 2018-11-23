@@ -66,16 +66,20 @@ class IModelVC : UIViewController {
 		}
 	}
 
-	func goDetailProject(_ local: Local) {
+	func goDetailProjectNC(_ model: Any?) {
+		guard let model = model else { return }
 		let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
 		let detailProjectNC = storyBoard.instantiateViewController(withIdentifier: "detailprojectnc") as! DetailProjectNC
 		delegate = detailProjectNC
-		delegate?.sendLocal(local)
+		if let local = model as? Local {
+			delegate?.sendLocal(local)
+			delegate?.currentType = .local
+		}
+		if let perspective = model as? Perspective {
+			delegate?.sendPerspective(perspective)
+			delegate?.currentType = .perspective
+		}
 		self.present(detailProjectNC, animated:true, completion:nil)
-	}
-
-	func goPerspectivePage(_ perspectives: Perspective?) {
-		print("go perspectives")
 	}
 
 	//Actions
@@ -88,12 +92,16 @@ class IModelVC : UIViewController {
 				switch tappedNode {
 					case let pinNode as PinNode where pinNode.type == .local :
 						guard let local = DataUser.currentProject?.locals[pinNode.index] else { return }
-						goDetailProject(local)
+						goDetailProjectNC(local)
 					case let pinNode as PinNode where pinNode.type == .perspective :
-						goPerspectivePage(nil)
+						guard let perspective = DataUser.currentProject?.perspectives[pinNode.index] else { return }
+						goDetailProjectNC(perspective)
 				default:
 					print("Unkown Nodes -> \(tappedNode!)")
+					return
 				}
+
+
 			}
 		}
 	}
