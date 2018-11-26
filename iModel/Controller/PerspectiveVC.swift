@@ -22,4 +22,8 @@ class PerspectiveVC: UIViewController {
 			}
 		}
     }
+
+	@IBAction func back(_ sender: UIBarButtonItem) {
+		navigationController?.dismiss(animated: true, completion: { })
+	}
 }

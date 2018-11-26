@@ -17,6 +17,7 @@ class DetailProjectVC: UIViewController, UITableViewDelegate, UITableViewDataSou
 		self.local = local
 		data = local.getAllProperties()
     }
+
 	@IBAction func back(_ sender: UIBarButtonItem) {
 		navigationController?.dismiss(animated: true, completion: { })
 	}

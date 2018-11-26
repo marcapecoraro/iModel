@@ -100,8 +100,6 @@ class IModelVC : UIViewController {
 					print("Unkown Nodes -> \(tappedNode!)")
 					return
 				}
-
-
 			}
 		}
 	}

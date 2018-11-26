@@ -32,6 +32,10 @@ class PerspectivesPageVC: UIPageViewController, UIPageViewControllerDelegate {
 		perspectiveVC.image = image
 		return perspectiveVC
 	}
+
+	@IBAction func back(_ sender: UIBarButtonItem) {
+		navigationController?.dismiss(animated: true, completion: { })
+	}
 }
 
 extension PerspectivesPageVC: UIPageViewControllerDataSource
