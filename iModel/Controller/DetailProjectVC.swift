@@ -14,6 +14,7 @@ class DetailProjectVC: UIViewController, UITableViewDelegate, UITableViewDataSou
 
 		guard let detailProjectNC = navigationController as? DetailProjectNC else { return }
 		guard let local = detailProjectNC.currentLocal else { return }
+		self.local = local
 		data = local.getAllProperties()
     }
 	@IBAction func back(_ sender: UIBarButtonItem) {

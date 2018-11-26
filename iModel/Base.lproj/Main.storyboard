@@ -366,6 +366,35 @@ Connectez vous et explorez</string>
             </objects>
             <point key="canvasLocation" x="2238" y="426"/>
         </scene>
+        <!--PerspectiveVC-->
+        <scene sceneID="g62-uL-1cO">
+            <objects>
+                <viewController storyboardIdentifier="perspectivevc" id="mRK-qm-yFZ" customClass="PerspectiveVC" customModule="iModelExt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ecT-TR-Qgg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O8o-LO-PvW">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Uat-aE-unb" firstAttribute="trailing" secondItem="O8o-LO-PvW" secondAttribute="trailing" id="7KV-CX-24H"/>
+                            <constraint firstItem="Uat-aE-unb" firstAttribute="bottom" secondItem="O8o-LO-PvW" secondAttribute="bottom" id="KGc-Te-DIC"/>
+                            <constraint firstItem="O8o-LO-PvW" firstAttribute="top" secondItem="Uat-aE-unb" secondAttribute="top" id="idu-Ny-WJN"/>
+                            <constraint firstItem="O8o-LO-PvW" firstAttribute="leading" secondItem="Uat-aE-unb" secondAttribute="leading" id="mvq-0L-gcb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Uat-aE-unb"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="O8o-LO-PvW" id="lm0-gz-8e5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ki7-kk-HZ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2897" y="426"/>
+        </scene>
         <!--Detail ProjectVC-->
         <scene sceneID="Ziw-sz-q8u">
             <objects>

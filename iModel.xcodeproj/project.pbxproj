@@ -24,6 +24,7 @@
 		004AA0DF21A6C74C00021655 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA0DE21A6C74C00021655 /* Pin.swift */; };
 		004AA0ED21A8375800021655 /* PerspectivesPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA0EC21A8375800021655 /* PerspectivesPageVC.swift */; };
 		004AA0FE21A8401700021655 /* Perspective.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA0FD21A8401700021655 /* Perspective.swift */; };
+		004AA10021ABF96C00021655 /* PerspectiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA0FF21ABF96C00021655 /* PerspectiveVC.swift */; };
 		005F10502199DEF90064C5B8 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 005F0FE72199C1C60064C5B8 /* AlamofireImage.framework */; };
 		005F10512199DEF90064C5B8 /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 005F0FE72199C1C60064C5B8 /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		005F10B92199E02E0064C5B8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 005F107A2199DFA60064C5B8 /* Alamofire.framework */; };
@@ -201,6 +202,7 @@
 		004AA0DE21A6C74C00021655 /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Pin.swift; path = iModel/DataModel/Pin.swift; sourceTree = SOURCE_ROOT; };
 		004AA0EC21A8375800021655 /* PerspectivesPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectivesPageVC.swift; sourceTree = "<group>"; };
 		004AA0FD21A8401700021655 /* Perspective.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Perspective.swift; path = iModel/DataModel/Perspective.swift; sourceTree = SOURCE_ROOT; };
+		004AA0FF21ABF96C00021655 /* PerspectiveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveVC.swift; sourceTree = "<group>"; };
 		005F0FDA2199C1C60064C5B8 /* AlamofireImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AlamofireImage.xcodeproj; path = Frameworks/AlamofireImage/AlamofireImage.xcodeproj; sourceTree = "<group>"; };
 		005F106E2199DFA60064C5B8 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Frameworks/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		005F10D42199E5040064C5B8 /* CellProject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellProject.swift; sourceTree = "<group>"; };
@@ -348,6 +350,7 @@
 				004AA0CE21A5972700021655 /* DetailProjectNC.swift */,
 				004AA0BD21A5949300021655 /* DetailProjectVC.swift */,
 				004AA0EC21A8375800021655 /* PerspectivesPageVC.swift */,
+				004AA0FF21ABF96C00021655 /* PerspectiveVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -608,6 +611,7 @@
 				004AA0B421A5667600021655 /* PinNode.swift in Sources */,
 				005F10E32199E5040064C5B8 /* CellProject.swift in Sources */,
 				004AA09A21A44AE900021655 /* SignNC.swift in Sources */,
+				004AA10021ABF96C00021655 /* PerspectiveVC.swift in Sources */,
 				005F10F22199E85B0064C5B8 /* AllProjectsTableVC.swift in Sources */,
 				00CE7C60219B278500AA23B4 /* SignInSignUpVC.swift in Sources */,
 				005F10ED2199E5040064C5B8 /* TestNode.swift in Sources */,

@@ -18,7 +18,6 @@ class DetailProjectNC: UINavigationController {
 		let vc = storyBoard.instantiateViewController(withIdentifier: identifier)
 		self.pushViewController(vc, animated:true)
 
-
 	}
 }
 

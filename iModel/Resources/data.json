@@ -39,12 +39,14 @@
 				{
 					"id": 3
 					, "pin" : { "position": {"x": 10, "y": 10, "z": -51}, "color":"#D1345F" }
-					, "img" : ["https://as1.ftcdn.net/jpg/01/63/33/78/500_F_163337883_Os19EuH8U6ktZT7Zo1NAJ6GYHo9CFS7T.jpg"]
+					, "img" : ["https://as1.ftcdn.net/jpg/01/63/33/78/500_F_163337883_Os19EuH8U6ktZT7Zo1NAJ6GYHo9CFS7T.jpg"
+								,"https://as2.ftcdn.net/jpg/00/45/78/21/500_F_45782186_CoDNp8UbFVbY3BLheBgrL0QwwjgRSXlV.jpg"]
 				},
 				{
 					"id": 4
-					, "pin" : { "position": {"x": -10, "y": 10, "z": -51}, "color":"#D1345F" }
-					, "img" : ["https://as1.ftcdn.net/jpg/01/63/33/78/500_F_163337883_Os19EuH8U6ktZT7Zo1NAJ6GYHo9CFS7T.jpg"]
+					, "pin" : { "position": {"x": -10, "y": 10, "z": -51}, "color":"#C22845" }
+					, "img" : ["https://as1.ftcdn.net/jpg/01/63/33/78/500_F_163337883_Os19EuH8U6ktZT7Zo1NAJ6GYHo9CFS7T.jpg"
+						,"https://as2.ftcdn.net/jpg/00/45/78/21/500_F_45782186_CoDNp8UbFVbY3BLheBgrL0QwwjgRSXlV.jpg"]
 				}
 			]
 		}
