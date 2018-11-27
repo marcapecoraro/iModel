@@ -25,6 +25,7 @@
 		004AA0ED21A8375800021655 /* PerspectivesPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA0EC21A8375800021655 /* PerspectivesPageVC.swift */; };
 		004AA0FE21A8401700021655 /* Perspective.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA0FD21A8401700021655 /* Perspective.swift */; };
 		004AA10021ABF96C00021655 /* PerspectiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA0FF21ABF96C00021655 /* PerspectiveVC.swift */; };
+		004AA10A21AD4F6600021655 /* AccountTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA10921AD4F6600021655 /* AccountTableVC.swift */; };
 		005F10502199DEF90064C5B8 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 005F0FE72199C1C60064C5B8 /* AlamofireImage.framework */; };
 		005F10512199DEF90064C5B8 /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 005F0FE72199C1C60064C5B8 /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		005F10B92199E02E0064C5B8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 005F107A2199DFA60064C5B8 /* Alamofire.framework */; };
@@ -203,6 +204,7 @@
 		004AA0EC21A8375800021655 /* PerspectivesPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectivesPageVC.swift; sourceTree = "<group>"; };
 		004AA0FD21A8401700021655 /* Perspective.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Perspective.swift; path = iModel/DataModel/Perspective.swift; sourceTree = SOURCE_ROOT; };
 		004AA0FF21ABF96C00021655 /* PerspectiveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveVC.swift; sourceTree = "<group>"; };
+		004AA10921AD4F6600021655 /* AccountTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableVC.swift; sourceTree = "<group>"; };
 		005F0FDA2199C1C60064C5B8 /* AlamofireImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AlamofireImage.xcodeproj; path = Frameworks/AlamofireImage/AlamofireImage.xcodeproj; sourceTree = "<group>"; };
 		005F106E2199DFA60064C5B8 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Frameworks/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		005F10D42199E5040064C5B8 /* CellProject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellProject.swift; sourceTree = "<group>"; };
@@ -351,6 +353,7 @@
 				004AA0BD21A5949300021655 /* DetailProjectVC.swift */,
 				004AA0EC21A8375800021655 /* PerspectivesPageVC.swift */,
 				004AA0FF21ABF96C00021655 /* PerspectiveVC.swift */,
+				004AA10921AD4F6600021655 /* AccountTableVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -598,6 +601,7 @@
 				005F10F12199E85B0064C5B8 /* IModelVC.swift in Sources */,
 				004AA0DB21A5C30500021655 /* Local.swift in Sources */,
 				004AA0D721A5C0DA00021655 /* DataUser.swift in Sources */,
+				004AA10A21AD4F6600021655 /* AccountTableVC.swift in Sources */,
 				004AA0CF21A5972700021655 /* DetailProjectNC.swift in Sources */,
 				0073FD102199BD4B000ACFCD /* iModel.xcdatamodeld in Sources */,
 				004AA0D321A5BFDC00021655 /* Project.swift in Sources */,
