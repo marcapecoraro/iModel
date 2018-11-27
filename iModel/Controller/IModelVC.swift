@@ -35,8 +35,8 @@ class IModelVC : UIViewController {
 		scene.rootNode.addChildNode(lightNode)
 
 		sceneView.scene = scene
-		sceneView.showsStatistics = true
-		sceneView.backgroundColor = UIColor.black
+		//sceneView.showsS;tatistics = true
+		sceneView.backgroundColor = UIColor.white
 		sceneView.allowsCameraControl = true
 	}
 

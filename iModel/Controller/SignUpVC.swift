@@ -14,6 +14,6 @@ class SignUpVC: UIViewController {
     }
 
 	@IBAction func connect(_ sender: Any) {
-		DataUser.currentUser = UserBasic(id: 1, email: "marca.peco@gmail.com", firstname: "Marc-Antoine", lastname: "Pecoraro", telephone: "0699689968", location: "245 rue d'Arras, Biarritz")
+
 	}
 }

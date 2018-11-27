@@ -25,9 +25,4 @@ class AllProjectsTableVC: UITableViewController {
 	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		return 400
 	}
-
-	override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-		tableView.deselectRow(at: indexPath, animated: false)
-		return indexPath
-	}
 }

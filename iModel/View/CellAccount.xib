@@ -10,11 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellAccount" rowHeight="57" id="hMp-jq-cFK" customClass="CellAccount" customModule="iModelExt" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellaccount" rowHeight="60" id="hMp-jq-cFK" customClass="CellAccount" customModule="iModelExt" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hMp-jq-cFK" id="git-cQ-uDL">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="56.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prénom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OwP-NJ-NLf">
@@ -24,7 +24,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFY-Qk-gj8">
-                        <rect key="frame" x="16" y="30.5" width="343" height="15.5"/>
+                        <rect key="frame" x="16" y="33.5" width="343" height="15.5"/>
                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="11"/>
                         <color key="textColor" red="0.56470588235294117" green="0.58823529411764708" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -39,11 +39,13 @@
                     <constraint firstItem="OwP-NJ-NLf" firstAttribute="leading" secondItem="git-cQ-uDL" secondAttribute="leadingMargin" id="TAh-5U-OIF"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <accessibility key="accessibilityConfiguration" identifier="cellaccount"/>
             <connections>
                 <outlet property="keyLabel" destination="OwP-NJ-NLf" id="Kik-yD-ViD"/>
                 <outlet property="valueLabel" destination="MFY-Qk-gj8" id="Ndr-35-E58"/>
             </connections>
-            <point key="canvasLocation" x="112.8" y="-67.916041979010501"/>
+            <point key="canvasLocation" x="112.8" y="-66.566716641679164"/>
         </tableViewCell>
     </objects>
 </document>

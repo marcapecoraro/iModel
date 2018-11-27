@@ -16,4 +16,19 @@ struct UserBasic {
 		self.telephone = telephone
 		self.location = location
 	}
+
+	func getAllProperties() -> [[String: Any]] {
+
+		var result: [[String: Any]] = []
+		let mirror = Mirror(reflecting: self)
+
+		for (property, value) in mirror.children where value is String {
+			guard let property = property else {
+				continue
+			}
+			result.append([property : value])
+		}
+
+		return result
+	}
 }
