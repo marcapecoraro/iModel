@@ -4,7 +4,7 @@ class AccountTableVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+		tableView.register(UINib(nibName: "CellAccount", bundle: nil), forCellReuseIdentifier: "cellaccount")
     }
 
     // MARK: - Table view data source
